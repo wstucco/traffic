@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+  <head>
+    <title>Traffic - The Go web framework</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <a href="http://github.com/pilu/traffic">
+      <img alt='Fork me on GitHub' id='ribbon' src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" />
+    </a>
+  </body>
+  <div id="container">
+    <div id="download">
+      <a href="https://github.com/pilu/traffic/archive/master.zip">
+        <img src="http://github.com/images/modules/download/zip.png" />
+      </a>
+    </div>
+    <h1>Traffic <em>the <a href="http://golang.org" title="Golang">Go</a> web framework</em></h1>
+    <p>
+      Easy to use web framework for <a href="http://golang.org" title="Golang">Go</a>.
+    </p>
+    <h2>Features</h2>
+    <ul>
+      <li><a href="https://github.com/pilu/traffic/blob/master/examples/simple/main.go">Regexp routing</a></li>
+      <li><a href="https://github.com/pilu/traffic/blob/master/examples/before-filter/main.go">Before Filters</a></li>
+      <li><a href="https://github.com/pilu/traffic/blob/master/examples/not-found/main.go">Custom not found handler</a></li>
+      <li><a href="https://github.com/pilu/traffic/blob/master/examples/middleware/main.go">Middlewares</a></li>
+    </ul>
+    <h2>Installation</h2>
+    <pre>$ go get github.com/pilu</pre>
+    <h2>Usage</h2>
+    <pre>router := traffic.New()
+
+// Routes
+router.Get("/", rootHandler)
+router.Get("/categories/:category_id/pages/:id", pageHandler)
+
+http.Handle("/", router)
+http.ListenAndServe(":7000", nil)</pre>
+    <div class='footer'>
+      &copy; 2013 <a href="http://gravityblast.com">Andrea Franz</a> - <a href="http://twitter.com/gravityblast">@gravityblast</a>
+    </div>
+  </div>
+</html>
